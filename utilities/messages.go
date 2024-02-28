@@ -8,7 +8,7 @@ import (
 
 // Creates a `*bytes.Buffer` for a message, to be handled by an `*http.Request`.
 //
-// Can also be used in the `CreateHeader` function.
+// Can also be used in the `CreateRequest` function.
 func CreateMessage(preview_url bool, body string) *bytes.Buffer {
 	message := WhatsAppMessage{
 		MessagingProduct: "whatsapp",
@@ -29,7 +29,7 @@ func CreateMessage(preview_url bool, body string) *bytes.Buffer {
 }
 
 // Creates an `*http.Request` for sending a message.
-func CreateHeader(method string, data *bytes.Buffer) *http.Request {
+func CreateRequest(method string, data *bytes.Buffer) *http.Request {
 	req, err := http.NewRequest(method, URL, data)
 	CheckError("Error creating request", err)
 

@@ -7,6 +7,6 @@ import (
 func main() {
 
 	msgData := utilities.CreateMessage(true, "DOLYA BOT ACTIVATED")
-	req := utilities.CreateHeader("POST", msgData)
+	req := utilities.CreateRequest("POST", msgData)
 	utilities.SendMessage(req)
 }
