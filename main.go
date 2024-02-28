@@ -5,8 +5,5 @@ import (
 )
 
 func main() {
-
-	msgData := utilities.CreateMessage(true, "DOLYA BOT ACTIVATED")
-	req := utilities.CreateRequest("POST", msgData)
-	utilities.SendMessage(req)
+	utilities.CreateAndSendMessage(true, "DOLYA BOT ACTIVATED", "POST")
 }

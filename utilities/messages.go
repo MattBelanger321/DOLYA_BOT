@@ -38,3 +38,11 @@ func CreateRequest(method string, data *bytes.Buffer) *http.Request {
 
 	return req
 }
+
+// Combines the functionality of `CreateMessage`, `CreateRequest` and `SendMessage`
+// to create and send the message.
+func CreateAndSendMessage(preview_url bool, body, method string) {
+	data := CreateMessage(preview_url, body)
+	req := CreateRequest(method, data)
+	SendMessage(req)
+}

@@ -8,6 +8,9 @@
 *.so
 *.dylib
 
+# `ids.go` for storing local data
+utilities/ids.go
+
 # Test binary, built with `go test -c`
 *.test
 

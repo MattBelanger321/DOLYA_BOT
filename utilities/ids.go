@@ -3,7 +3,7 @@ package utilities
 var (
 	URL = "https://graph.facebook.com/v17.0/233298403205906/messages"
 	// Replace with your actual token.
-	Token = "EAALMF3jOoVgBOzwXHcNrEEbTRoewuJjc8hu24dH0xkmliiVz8kYSjpiY4j5YvGBdpcTuwtNSgokBGei8ZBM1c4B2tjD3z2JlGdJLbZA1nhpxs87PlrmsUL2e0pUiGXYAOsZA2KP4a2AEOk9oejM9GNfqFiARbTcgF3ao8rGxdhQmGIsHp0ZAeKQU9QuXugGIPCVQPw1szA1iXmbAkPYZD"
+	Token = "EAALMF3jOoVgBOZBfrFHIu0lsAcudLRiFibv7i3Ms221p4fKHaCYmuaHnGZCvVvrB1y4XbDKrYhLZA52vZA4301Swo68u8UPn4dPSPm64k3mgx0Dvs69anOZBkoYc2ZBMnge2cKdPPZAdwSncvIQbZBnpmD5QlSz23MeXHkcwNZBkBiRpJ8SxxSeIauOnlJQJmpDg7tmFg38OBbAbEhck9sKUZD"
 	// Replace with the recipient's phone number.
 	To = "+15199912176"
 )
