@@ -8,7 +8,7 @@ package utilities
 var (
 	URL = "https://graph.facebook.com/v17.0/SOME_NUMERIC_VALUE/messages"
 	Token = "SOME_TOKEN"
-	To = "+SOME_PHONE_NUMBER"
+	To = "SOME_PHONE_NUMBER" // You may need to include a `1` in front of your phone number.
 )
 
 ```
