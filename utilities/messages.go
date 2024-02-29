@@ -30,7 +30,7 @@ func CreateMessage(preview_url bool, phone, body string) *bytes.Buffer {
 
 // Creates an `*http.Request` for sending a message.
 func CreateRequest(method string, data *bytes.Buffer) *http.Request {
-	req, err := http.NewRequest(method, URL, data)
+	req, err := http.NewRequest(method, URL+ID+Command, data)
 	CheckError("Error creating request", err)
 
 	req.Header.Set("Authorization", "Bearer "+Token)
