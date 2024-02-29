@@ -9,15 +9,15 @@ import (
 // Creates a `*bytes.Buffer` for a message, to be handled by an `*http.Request`.
 //
 // Can also be used in the `CreateRequest` function.
-func CreateMessage(preview_url bool, body string) *bytes.Buffer {
+func CreateMessage(preview_url bool, phone, body string) *bytes.Buffer {
 	message := WhatsAppMessage{
 		MessagingProduct: "whatsapp",
 		RecipientType:    "individual",
-		To:               To,
+		To:               phone,
 		Type:             "text",
 		Text: TextStruct{
-			PreviewURL: true,
-			Body:       "DOLYA BOT ACTIVATED",
+			PreviewURL: false,
+			Body:       body,
 		},
 	}
 
@@ -41,8 +41,8 @@ func CreateRequest(method string, data *bytes.Buffer) *http.Request {
 
 // Combines the functionality of `CreateMessage`, `CreateRequest` and `SendMessage`
 // to create and send the message.
-func CreateAndSendMessage(preview_url bool, body, method string) {
-	data := CreateMessage(preview_url, body)
+func CreateAndSendMessage(preview_url bool, phone, body, method string) {
+	data := CreateMessage(preview_url, phone, body)
 	req := CreateRequest(method, data)
 	SendMessage(req)
 }
